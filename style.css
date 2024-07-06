@@ -763,6 +763,10 @@ footer{
   .home-content h3 {
     font-size: 24px;
   }
+    .testimonial {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -810,12 +814,7 @@ footer{
     padding: 20px 10px;
   }
 }
-@media (max-width: 992px) {
-  .testimonial {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
+
 
 @media (max-width: 576px) {
   .home-content h1 {
