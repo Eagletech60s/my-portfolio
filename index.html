@@ -24,20 +24,15 @@
 
 <body>
     <header class="header">
-
-        <a href="" class="logo">Portfolio</a>
-        <div class="menu-toggle" id="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <a href="#" class="logo">Portfolio</a>
         <nav class="navbar">
-            <a href="#home" style="--i:1">Home</a>
-            <a href="#about" style="--i:2">About</a>
-            <a href="#skills" style="--i:3">Skills</a>
-            <a href="#portfolio" style="--i:4">Portfolio</a>
-            <a href="#contact" style="--i:5">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
         </nav>
+        <div class="toggle" id="nav-toggle">☰</div>
     </header>
 
     <section class="home" id="home">
@@ -265,7 +260,8 @@
                 <li><i class="fa-sharp fa-solid fa-phone"></i>0794017388</li>
             </div>
             <div class="contact-icons">
-                <a href="https://www.facebook.com/share/YuQd9GYMxho5K1Pu/?mibextid=qi2Omg"><i class="fa-brands fa-facebook "></i></a>
+                <a href="https://www.facebook.com/share/YuQd9GYMxho5K1Pu/?mibextid=qi2Omg"><i
+                        class="fa-brands fa-facebook "></i></a>
                 <a href="https://www.instagram.com/webdev531/"><i class="fa-brands fa-instagram "></i></a>
             </div>
         </div>
@@ -334,40 +330,28 @@
 
     <a href="#" class="top"><i class="fa-solid fa-arrow-up fa-beat-fade"></i></a>
     <script src="script.js"></script>
-     <script type="text/javascript">
-     
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // اجمع البيانات من النموذج
-    var templateParams = {
-        name: this.name.value,
-        email: this.email.value,
-        subject: this.subject.value,
-        message: this.message.value
-    };
-
-    // إرسال البريد الإلكتروني باستخدام EmailJS
-    emailjs.send('service_nrb1elh', 'template_412zz6n', templateParams)
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Email sent successfully.');
-        }, function(error) {
-            console.log('FAILED...', error);
-            alert('Failed to send email.');
-        });
-});
-
-    </script>
-     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const navbar = document.getElementById('navbar');
-
-        menuToggle.addEventListener('click', () => {
-            navbar.classList.toggle('active')
-        
+    <script type="text/javascript">
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // اجمع البيانات من النموذج
+            var templateParams = {
+                name: this.name.value,
+                email: this.email.value,
+                subject: this.subject.value,
+                message: this.message.value
+            };
+            // إرسال البريد الإلكتروني باستخدام EmailJS
+            emailjs.send('service_nrb1elh', 'template_412zz6n', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Email sent successfully.');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send email.');
+                });
         });
     </script>
+  <script src="./responisve.js"></script>
     <!-- Add Swiper.js -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

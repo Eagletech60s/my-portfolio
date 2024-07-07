@@ -51,16 +51,15 @@
 .navbar a:hover {
   color: var(--Primary);
 }
-.menu-toggle {
-  display: none;
-  cursor: pointer;
+
+.navbar.active {
+  display: block; /* استخدم هذا لإظهار القائمة عند تفعيلها */
 }
-.menu-toggle span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: #000;
-  margin: 5px 0;
+
+.toggle {
+  display: none; /* إخفاء الزر في الشاشات الكبيرة */
+  font-size: 30px;
+  cursor: pointer;
 }
 .home {
   position: relative;
@@ -891,4 +890,23 @@ footer{
   }
 }
 
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 5%;
+  }
+  .navbar {
+    display: none; /* إخفاء القائمة في الشاشات الصغيرة */
+    flex-direction: column;
+  }
+  .navbar a {
+    margin: 10px 0;
+  }
+  .toggle {
+    display: block; /* إظهار الزر في الشاشات الصغيرة */
+  }
+
+
+
+
+}
 
