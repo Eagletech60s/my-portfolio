@@ -26,6 +26,11 @@
     <header class="header">
 
         <a href="" class="logo">Portfolio</a>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav class="navbar">
             <a href="#home" style="--i:1">Home</a>
             <a href="#about" style="--i:2">About</a>
@@ -353,6 +358,14 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         });
 });
 
+    </script>
+     <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
     </script>
     <!-- Add Swiper.js -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
