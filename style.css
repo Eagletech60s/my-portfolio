@@ -764,6 +764,7 @@ footer{
   .navbar a {
     font-size: 18px;
   }
+  
 
   .home-content h1 {
     font-size: 40px;
@@ -782,7 +783,9 @@ footer{
   .header {
     padding: 10px 5%;
   }
-
+.logo{
+  padding-right:50px;
+}
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -800,7 +803,9 @@ footer{
   .menu-toggle {
     display: block;
   }
-  
+  .toggle{
+    padding-left:30px;
+  }
 
   .home {
     flex-direction: column;
