@@ -368,6 +368,14 @@
     </script>
   <script src="./responisve.js"></script>
 <script src="./dashbord.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const isAdmin = localStorage.getItem('isAdmin');
+        if (isAdmin === 'true') {
+            document.querySelector('.admin-section').style.display = 'block';
+        }
+    });
+</script>
  
     <!-- Add Swiper.js -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
