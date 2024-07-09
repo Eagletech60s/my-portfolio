@@ -796,7 +796,9 @@ tbody tr:hover {
         font-weight: bold;
     }
 }
-
+.admin-section{
+  display:none;
+}
 @media (max-width: 1200px) {
   .about {
     grid-template-columns: 1fr;
