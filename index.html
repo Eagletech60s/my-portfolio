@@ -352,6 +352,38 @@
         });
     </script>
   <script src="./responisve.js"></script>
+  <script>
+    async function getVisitorIP() {
+    try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        return data.ip;
+    } catch (error) {
+        console.error('Error fetching IP address:', error);
+        return null;
+    }
+}
+
+async function trackVisit() {
+    const ip = await getVisitorIP();
+    if (!ip) return;
+
+    let visits = JSON.parse(localStorage.getItem('visits')) || {};
+
+    if (visits[ip]) {
+        visits[ip].count += 1;
+        visits[ip].lastVisit = new Date().toLocaleString();
+    } else {
+        visits[ip] = {
+            count: 1,
+            lastVisit: new Date().toLocaleString()
+        };
+    }
+
+    localStorage.setItem('visits', JSON.stringify(visits));
+    displayVisits(visits);
+}
+  </script>
     <!-- Add Swiper.js -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
